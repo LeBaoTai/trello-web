@@ -31,7 +31,7 @@ function Profile() {
           aria-controls={open ? 'account-menu-profile' : undefined}
           aria-haspopup="true"
           aria-expanded={open ? 'true' : undefined}>
-          <Avatar sx={{ width: 30, height: 30 }} src="src/assets/10x15.jpg" />
+          <Avatar sx={{ width: 34, height: 34 }} src="src/assets/10x15.jpg" />
         </IconButton>
       </Tooltip>
       <Menu
@@ -43,10 +43,10 @@ function Profile() {
           'aria-labelledby': 'basic-button-profile'
         }}>
         <MenuItem>
-          <Avatar sx={{ width: 28, height: 28, mr: 2 }} /> Profile
+          <Avatar sx={{ width: 30, height: 30, mr: 2 }} /> Profile
         </MenuItem>
         <MenuItem>
-          <Avatar sx={{ width: 28, height: 28, mr: 2 }} /> My account
+          <Avatar sx={{ width: 30, height: 30, mr: 2 }} /> My account
         </MenuItem>
         <Divider />
         <MenuItem>
