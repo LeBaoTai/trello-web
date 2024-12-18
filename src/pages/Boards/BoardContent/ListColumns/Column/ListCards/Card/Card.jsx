@@ -23,7 +23,8 @@ function Card({ card }) {
     // touchAction: 'none', // dành cho default là pointer
     transform: CSS.Translate.toString(transform),
     transition,
-    opacity: isDragging ? 0.4 : undefined
+    opacity: isDragging ? 0.4 : undefined,
+    border: isDragging ? '1px solid #2ecc71' : undefined
   }
   const shouldShowCardAction = () => {
     return (
