@@ -22,7 +22,8 @@ function ModeSelect() {
     <FormControl size="small" sx={{ minWidth: 120 }}>
       <InputLabel
         id="lable-select-dark-light-mode"
-        sx={{ color: 'white', '&.Mui-focused': { color: 'white' } }}>
+        sx={{ color: 'white', '&.Mui-focused': { color: 'white' } }}
+      >
         Mode
       </InputLabel>
       <Select
@@ -40,7 +41,8 @@ function ModeSelect() {
           },
           '.MuiSvgIcon-root ': { color: 'white' }
         }}
-        required>
+        required
+      >
         <MenuItem value="light">
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
             <LightModeIcon fontSize="small" /> Light

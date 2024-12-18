@@ -32,7 +32,8 @@ function Workspaces() {
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
-        endIcon={<ArrowDropDownIcon />}>
+        endIcon={<ArrowDropDownIcon />}
+      >
         Workspaces
       </Button>
       <Menu
@@ -42,7 +43,8 @@ function Workspaces() {
         onClose={handleClose}
         MenuListProps={{
           'aria-labelledby': 'basic-button-workspaces'
-        }}>
+        }}
+      >
         <MenuItem>
           <ListItemIcon>
             <ContentCut fontSize="small" />

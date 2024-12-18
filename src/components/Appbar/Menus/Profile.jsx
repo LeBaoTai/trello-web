@@ -30,7 +30,8 @@ function Profile() {
           sx={{ padding: 0 }}
           aria-controls={open ? 'account-menu-profile' : undefined}
           aria-haspopup="true"
-          aria-expanded={open ? 'true' : undefined}>
+          aria-expanded={open ? 'true' : undefined}
+        >
           <Avatar sx={{ width: 34, height: 34 }} src="src/assets/10x15.jpg" />
         </IconButton>
       </Tooltip>
@@ -41,7 +42,8 @@ function Profile() {
         onClose={handleClose}
         MenuListProps={{
           'aria-labelledby': 'basic-button-profile'
-        }}>
+        }}
+      >
         <MenuItem>
           <Avatar sx={{ width: 30, height: 30, mr: 2 }} /> Profile
         </MenuItem>
