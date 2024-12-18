@@ -17,7 +17,7 @@ import Recent from '~/components/Appbar/Menus/Recent'
 import Starred from '~/components/Appbar/Menus/Starred'
 import Templates from '~/components/Appbar/Menus/Templates'
 import Workspaces from '~/components/Appbar/Menus/WorkSpaces'
-import ModeSelect from '~/components/ModeSelect'
+import ModeSelect from '~/components/ModeSelect/ModeSelect'
 import CloseIcon from '@mui/icons-material/Close'
 import { useState } from 'react'
 
@@ -37,20 +37,23 @@ function AppBar() {
         overflowX: 'auto',
         bgcolor: theme =>
           theme.palette.mode === 'dark' ? '#2c3e50' : '#1565c0'
-      }}>
+      }}
+    >
       <Box
         sx={{
           display: 'flex',
           alignItems: 'center',
           gap: 2
-        }}>
+        }}
+      >
         <AppsIcon sx={{ color: 'white' }} />
         <Box
           sx={{
             display: 'flex',
             alignItems: 'center',
             gap: 0.5
-          }}>
+          }}
+        >
           <SvgIcon
             component={TrelloIcon}
             inheritViewBox
@@ -65,7 +68,8 @@ function AppBar() {
               fontSize: '1.2rem',
               color: 'white',
               fontWeight: 'bold'
-            }}>
+            }}
+          >
             Trello
           </Typography>
         </Box>
@@ -81,7 +85,8 @@ function AppBar() {
               color: 'white',
               border: 'none',
               '&hover': { border: 'none' }
-            }}>
+            }}
+          >
             Create
           </Button>
         </Box>
@@ -91,7 +96,8 @@ function AppBar() {
           display: 'flex',
           alignItems: 'center',
           gap: 1.5
-        }}>
+        }}
+      >
         <TextField
           id="outlined-seach"
           label="Search..."
@@ -109,7 +115,10 @@ function AppBar() {
               ),
               endAdornment: (
                 <CloseIcon
-                  sx={{ color: searchValue ? 'white' : 'transparent', cursor: 'pointer' }}
+                  sx={{
+                    color: searchValue ? 'white' : 'transparent',
+                    cursor: 'pointer'
+                  }}
                   fontSize="small"
                   onClick={() => setSearchValue('')}
                 />

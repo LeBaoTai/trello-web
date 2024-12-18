@@ -28,7 +28,8 @@ function Starred() {
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
-        endIcon={<ArrowDropDownIcon />}>
+        endIcon={<ArrowDropDownIcon />}
+      >
         Starred
       </Button>
       <Menu
@@ -38,7 +39,8 @@ function Starred() {
         onClose={handleClose}
         MenuListProps={{
           'aria-labelledby': 'basic-button-starred'
-        }}>
+        }}
+      >
         <MenuItem>
           <ListItemText inset>Single</ListItemText>
         </MenuItem>

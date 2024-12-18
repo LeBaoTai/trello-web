@@ -28,7 +28,8 @@ function Recent() {
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
-        endIcon={<ArrowDropDownIcon />}>
+        endIcon={<ArrowDropDownIcon />}
+      >
         Recent
       </Button>
       <Menu
@@ -38,7 +39,8 @@ function Recent() {
         onClose={handleClose}
         MenuListProps={{
           'aria-labelledby': 'basic-button-recent'
-        }}>
+        }}
+      >
         <MenuItem>
           <ListItemText inset>Single</ListItemText>
         </MenuItem>

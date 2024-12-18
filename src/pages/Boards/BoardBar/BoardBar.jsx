@@ -10,6 +10,7 @@ import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Chip from '@mui/material/Chip'
 import Tooltip from '@mui/material/Tooltip'
+import { capitalizeFirstLetter } from '~/utils/fortmatter'
 
 const MENU_STYLES = {
   color: 'white',
@@ -25,7 +26,7 @@ const MENU_STYLES = {
   }
 }
 
-function BoardBar() {
+function BoardBar({ board }) {
   return (
     <Box
       sx={{
@@ -38,8 +39,7 @@ function BoardBar() {
         gap: 2,
         overflowX: 'auto',
         bgcolor: theme =>
-          theme.palette.mode === 'dark' ? '#34495e' : '#1976d2',
-        borderBottom: '1px solid white'
+          theme.palette.mode === 'dark' ? '#34495e' : '#1976d2'
       }}>
       <Box
         sx={{
@@ -49,13 +49,13 @@ function BoardBar() {
         }}>
         <Chip
           icon={<DashboardIcon />}
-          label="LeBaoTai Mern Stack"
+          label={board?.title}
           onClick={() => {}}
           sx={MENU_STYLES}
         />
         <Chip
           icon={<VpnLockIcon />}
-          label="Public/Private Workspace"
+          label={capitalizeFirstLetter(board?.type)}
           onClick={() => {}}
           sx={MENU_STYLES}
         />
@@ -98,7 +98,10 @@ function BoardBar() {
               width: 34,
               height: 34,
               fontSize: 15,
-              border:'none'
+              border: 'none',
+              color: 'white',
+              cursor: 'pointer',
+              '&:first-of-type': { bgcolor: '#a4b0be' }
             }
           }}>
           <Tooltip title="dev">

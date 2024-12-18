@@ -28,7 +28,8 @@ function Templates() {
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
-        endIcon={<ArrowDropDownIcon />}>
+        endIcon={<ArrowDropDownIcon />}
+      >
         Templates
       </Button>
       <Menu
@@ -38,7 +39,8 @@ function Templates() {
         onClose={handleClose}
         MenuListProps={{
           'aria-labelledby': 'basic-button-templates'
-        }}>
+        }}
+      >
         <MenuItem>
           <ListItemText inset>Single</ListItemText>
         </MenuItem>
